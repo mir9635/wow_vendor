@@ -1,0 +1,131 @@
+@import "./src/assets/styles/vars";
+
+.footer {
+  background-color: $content-800;
+  padding: 56px 0 32px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 56px;
+    border-bottom: 1px solid $content-300;
+
+    @media (max-width: 1023.75px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+
+    h4 {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 600;
+
+    }
+
+    p {
+      color: $content-400;
+      font-size: 16px;
+      font-weight: 400;
+
+      @media (max-width: 1023.75px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1023.75px) {
+      width: 100%;
+    }
+    @media (max-width: 575.75px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__input {
+    width: 470px;
+    border: 1px solid #D0D5DD;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    &::placeholder {
+      color: $content-400;
+    }
+
+    @media (max-width: 1023.75px) {
+      width: 100%;
+    }
+
+    @media (max-width: 575.75px) {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    font-family: inherit;
+    background-color: $primary-600;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: 0;
+
+    @media (max-width: 575.75px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 56px 0;
+
+    @media (max-width: 575.75px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
+  &__title {
+    color: $content-400;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__ul {
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: $content-100;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+    }
+  }
+
+  &__copyright {
+    padding: 32px 0;
+    color: $content-500;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./src/assets/styles/vars";
+
+.question {
+  border-bottom: 1px solid $content-200;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__title {
+    position: relative;
+    cursor: pointer;
+    color: $content-900;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    padding: 23px 40px 23px 0;
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    color: $content-500;
+    font-size: 16px;
+    line-height: 150%;
+    display: none;
+
+    p {
+      margin: 0 0 21px;
+    }
+
+    ul {
+      margin: 0 0 30px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      margin: 0 0 6px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background: $primary-600;
+      }
+    }
+  }
+
+  &.active {
+    .question__text {
+      display: block;
+    }
+  }
+}

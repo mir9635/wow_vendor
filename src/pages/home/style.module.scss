@@ -1,0 +1,10 @@
+@import "./src/assets/styles/vars";
+
+.home {
+  &__title {
+    color: $content-900;
+    font-size: 52px;
+    font-weight: 600;
+    margin: 15px 0 40px;
+  }
+}

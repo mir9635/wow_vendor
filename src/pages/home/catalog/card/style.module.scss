@@ -1,0 +1,229 @@
+@import "./src/assets/styles/vars";
+
+.card {
+  background: #FFFFFF;
+  padding: 12px 12px 17px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    flex: 1 0 auto;
+    padding: 0 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    margin: 0 0 20px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: $content-900;
+    margin: 0 0 10px;
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 143%;
+    color: $content-400;
+    margin: 0 0 16px;
+  }
+
+  &__prices {
+    align-self: stretch;
+    margin-top: auto;
+    border-top: 1px solid $content-200;
+    display: flex;
+    align-items: center;
+    padding: 11px 0 0;
+    min-height: 48px;
+
+    del {
+      font-weight: 500;
+      font-size: 16px;
+      color: $content-300;
+      padding-right: 8px;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      color: $content-900;
+    }
+
+    b {
+      margin-left: auto;
+      font-weight: 400;
+      font-size: 12px;
+      color: #fff;
+      background: $lime-500;
+      border-radius: 4px;
+      padding: 7px;
+    }
+  }
+}
+
+.badge {
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 12px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  &[data-cat="Action RPG"] {
+    background: $blue-50;
+    color: $blue-600;
+
+    &::before {
+      background: $blue-600;
+    }
+  }
+  &[data-cat="Multiplayer RPG"] {
+    background: $red-50;
+    color: $red-600;
+
+    &::before {
+      background: $red-600;
+    }
+  }
+  &[data-cat="Action"] {
+    background: $orange-50;
+    color: $orange-600;
+
+    &::before {
+      background: $orange-600;
+    }
+  }
+
+  &[data-cat="Shooter"] {
+    background: $primary-50;
+    color: $primary-600;
+
+    &::before {
+      background: $primary-600;
+    }
+  }
+  &[data-cat="Card Game"] {
+    background: $green-50;
+    color: $green-600;
+
+    &::before {
+      background: $green-600;
+    }
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 0 0 13px;
+
+  &__stars {
+    margin-right: 5px;
+
+    span {
+      margin-right: 4px;
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23EAECF0'/%3E%3C/svg%3E%0A");
+    }
+    &[data-rating='1'] {
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='1.5'] {
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+      span:nth-child(2) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23EAECF0'/%3E%3Cpath d='M2.2918 11L6 9.42501V0L3.96049 3.37501L0 4.20163L2.7 7.11411L2.2918 11Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='2'] {
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='2.5'] {
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+      span:nth-child(3) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23EAECF0'/%3E%3Cpath d='M2.2918 11L6 9.42501V0L3.96049 3.37501L0 4.20163L2.7 7.11411L2.2918 11Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='3'] {
+      span:nth-child(3),
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='3.5'] {
+      span:nth-child(3),
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+      span:nth-child(4) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23EAECF0'/%3E%3Cpath d='M2.2918 11L6 9.42501V0L3.96049 3.37501L0 4.20163L2.7 7.11411L2.2918 11Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='4'] {
+      span:nth-child(4),
+      span:nth-child(3),
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='4.5'] {
+      span:nth-child(4),
+      span:nth-child(3),
+      span:nth-child(2),
+      span:nth-child(1) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+      span:nth-child(5) {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23EAECF0'/%3E%3Cpath d='M2.2918 11L6 9.42501V0L3.96049 3.37501L0 4.20163L2.7 7.11411L2.2918 11Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+    &[data-rating='5'] {
+      span {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L8.03951 3.37501L12 4.20163L9.3 7.11411L9.7082 11L6 9.42501L2.2918 11L2.7 7.11411L0 4.20163L3.96049 3.37501L6 0Z' fill='%23FEC84B'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: $content-600;
+    opacity: 0.6;
+  }
+}
+

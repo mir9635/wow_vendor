@@ -1,0 +1,44 @@
+@import "./src/assets/styles/vars";
+
+.fixedNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $content-50;
+  display: none;
+  z-index: 2;
+  
+  @media (max-width: 1023.75px) {
+    display: block;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+
+  span {
+    padding-top: 10px;
+    display: block;
+    color: $content-400;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  svg {
+    fill: $content-900;
+  }
+  a:hover {
+    svg {
+      fill: $primary-600;
+    }
+    span {
+      color: $primary-600;
+    }
+  }
+
+
+}

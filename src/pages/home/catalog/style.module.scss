@@ -1,0 +1,115 @@
+@import "./src/assets/styles/vars";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0 0 38px;
+
+  @media (max-width: 1279.75px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1023.75px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 575.75px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.addCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $primary-300;
+  border-radius: 12px;
+  padding: 40px;
+
+  &__title {
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: $content-400;
+    margin: 0 0 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.paginationWrap {
+  padding: 8px 15px;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 0 84px;
+
+  :global .pagination {
+    display: flex;
+    justify-content: center;
+
+    .page-item {
+      cursor: pointer;
+      height: 36px;
+      width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: $content-900;
+      font-weight: 500;
+      font-size: 14px;
+      margin: 0 8px;
+      transition: background-color ease 0.4s, color ease 0.4s;
+
+      &.active {
+        background: $primary-600;
+        color: #fff;
+      }
+      &:hover {
+        background: $primary-50;
+        color: $primary-600;
+      }
+    }
+  }
+}
+
+.modal {
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 40px 15px 15px;
+  border-radius: 8px;
+
+  &__close {
+    border: 0;
+    background: rgba(0,0,0,0);
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  textarea,
+  input {
+    border: 1px solid $primary-600;
+    border-radius: 4px;
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  label {
+    display: flex;
+
+    span {
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+}
